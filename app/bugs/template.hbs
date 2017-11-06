@@ -1,5 +1,12 @@
 
 <div class="">
   here are some bugs!!
+  <ul>
+    {{#each model as |bug|}}
+      <li>{{bug.id}}</li>
+      <li>{{bug.title}}</li>
+      <li>{{bug.description}}</li>
+    {{/each}}
+  </ul>
 </div>
 {{outlet}}

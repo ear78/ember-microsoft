@@ -1,4 +1,17 @@
 <div class="">
   new!!
 </div>
+
+<div class="">
+  title: {{ input value=model.title}}
+</div>
+
+<div class="">
+  description: {{textarea value=model.description}}
+</div>
+
+<div class="">
+  <!-- saving complete model of this template, title/description -->
+  <button type="button" name="button" {{action 'save' model}}>Save</button>
+</div>
 {{outlet}}

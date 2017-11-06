@@ -7,8 +7,8 @@ export default Ember.Route.extend({
       let store = this.store;
 
       let newBug = store.createRecord('bug', {
-        title: 'Demo bug',
-        description: 'Demo description'
+        title: 'Another bug',
+        description: 'another description'
       });
 
       // Save Create record
@@ -17,17 +17,17 @@ export default Ember.Route.extend({
       })
 
       // Load record by Id
-      let loadedRecord = store.findRecord('bug', 'h79mf').then(function(loadedRecord){
-        console.log(loadedRecord.get('title'));
-      });
+      // let loadedRecord = store.findRecord('bug', 'h79mf').then(function(loadedRecord){
+      //   console.log(loadedRecord.get('title'));
+      // });
 
       // Updated Record
-      store.findRecord('bug', 'h79mf').then(function(loadedRecord){
-        loadedRecord.set('title', 'Updated title');
-        loadedRecord.save().then(()=>{
-          console.log('Saved record')
-        })
-      });
+      // store.findRecord('bug', 'h79mf').then(function(loadedRecord){
+      //   loadedRecord.set('title', 'Updated title');
+      //   loadedRecord.save().then(()=>{
+      //     console.log('Saved record')
+      //   })
+      // });
 
     }
   }
