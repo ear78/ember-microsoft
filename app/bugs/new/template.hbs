@@ -1,17 +1,4 @@
-<div class="">
-  new!!
-</div>
 
-<div class="">
-  title: {{ input value=model.title}}
-</div>
-
-<div class="">
-  description: {{textarea value=model.description}}
-</div>
-
-<div class="">
-  <!-- saving complete model of this template, title/description -->
-  <button type="button" name="button" {{action 'save' model}}>Save</button>
-</div>
-{{outlet}}
+{{#bug-editor bug=model handleRedirect='displayList'}}
+  <h3>Create Bug!</h3>
+{{/bug-editor}}

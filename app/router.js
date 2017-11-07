@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('bugs', function() {
     this.route('new');
     this.route('edit');
+    this.route('details', {path: ':id'});
   });
 });
 

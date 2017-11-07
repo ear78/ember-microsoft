@@ -1,12 +1,21 @@
 
-<div class="">
-  here are some bugs!!
-  <ul>
-    {{#each model as |bug|}}
-      <li>{{bug.id}}</li>
-      <li>{{bug.title}}</li>
-      <li>{{bug.description}}</li>
-    {{/each}}
-  </ul>
+<div class="row">
+  <div class="col-sm-5">
+    <h3>here are some bugs!!</h3>
+    <ul class="list-group">
+      {{#each model as |bug|}}
+        <li class="list-group-item">
+          {{#link-to 'bugs.details' bug}}
+            {{bug.title}}
+          {{/link-to}}
+        </li>
+        {{else}}
+        <h2>No bugs found</h2>
+      {{/each}}
+    </ul>
+  </div>
+  <div class="col-sm-7">
+    {{outlet}}
+  </div>
+  
 </div>
-{{outlet}}

@@ -5,10 +5,8 @@ export default Ember.Route.extend({
     return this.store.createRecord('bug');
   },
   actions: {
-    save: function(model){
-      model.save().then(()=>{
-        console.log('Model Saved');
-      })
+    displayList: function(){
+      this.transitionTo('bugs');
     }
   }
 });

@@ -1,0 +1,19 @@
+{{yield}}
+<div class="form-group">
+  <div class="col-sm-3">
+    title:
+  </div>
+  <div class="col-sm-9">
+    {{input value=bug.title class="form-control"}}
+  </div>
+</div>
+
+<div class="form-group">
+  <div class="col-sm-3">
+    description:
+  </div>
+  <div class="col-sm-9">
+    {{textarea value=bug.description class="form-control"}}
+  </div>
+</div>
+<button class="btn btn-success" type="button" name="button" {{action 'save' bug}}>Save</button>
