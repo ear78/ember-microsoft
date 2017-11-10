@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  // model(){
-  //   return this.store.findAll('bug');
-  // }
+  model: function(params){
+    return this.store.findRecord('bug', params.id);
+  }
 });
